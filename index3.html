@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Manipulando a DOM </title>
+        <body>
+<div id="app">
+ <ul>
+    <li>Fazer Café
+        <a href="#">Excluir</a>
+    </li>
+    <li>Estudar JavaScript
+       <a href="#">Excluir</a>
+    </li>
+    <li>Estudar Muito
+       <a href="#">Excluir</a>
+    </li>
+ </ul>
+ <input type="text" placeholder="Digite um todo">
+ <button>Adicionar</button>
+</div>
+
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="main.js"></script>
+
+
+<script src="https://sdk.scdn.co/spotify-player.js"></script>
+<script>
+window.onSpotifyWebPlaybackSDKReady = () => {
+  const userAccessToken = "[access token]";
+  const webPlayback = new Spotify.Player({
+    name: "Spotify Web Playback SDK",
+    getOAuthToken: callback => { callback(token)}
+  });
+  webPlayback.connect();
+};
+</script>
+
+        </body>
+    </head>
+</html>

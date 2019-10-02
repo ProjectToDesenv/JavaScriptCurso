@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Manipulando a DOM </title>
+        <body>
+<div id="app">
+   <input onkeypress="mostraAlerta()"/>
+   <input type="text" name="nome" id = "nome"/>
+   <button class="botao">Adicionar</button>
+</div>
+
+<div id="app02">
+  
+ </div>
+
+<script>
+function mostraAlerta(){
+    alert('Botão foi Clicado');
+}
+
+var inputElement = document.getElementById('nome');
+console.log(inputElement);
+
+var inputElement = document.getElementsByTagName('input');
+console.log(inputElement);
+
+var inputElement = document.getElementsByClassName('nome');
+console.log(inputElement);
+
+var inputElement = document.querySelector('body div#app input');
+console.log(inputElement);
+
+var inputElement = document.querySelectorAll('body div#app input');
+console.log(inputElement);
+
+var btnElement = document.querySelector('button.botao');
+btnElement.onclick = function(){
+    alert('Botão clicado');
+
+
+
+    var linkEment = document.createElement('a');
+    linkEment.setAttribute('href','http://www.sanesul.ms.gov.br');
+
+    var textElement = document.createTextNode('Acessar o link');
+    linkEment.appendChild(textElement);
+
+    var containerElement = document.querySelector('#app02');
+    containerElement.appendChild(linkEment);
+}
+</script>
+        </body>
+    </head>
+</html>

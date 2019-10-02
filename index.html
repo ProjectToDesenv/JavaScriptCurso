@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title> Curso JavaScript</title>
+        <body>
+            <script>
+                var x= 10, y = 5;
+
+                var resultado = x + y ;
+
+                x += 3;
+
+                x /= 3;
+
+                console.log(x);
+
+                var nome = "Marcelo Matos dos Santos";
+                var idade = 32;
+                var peso = 72.5;
+                var humano = true;
+
+                var alunos = ['Marcelo','Pedro','Antonio'];
+
+                var aluno = {
+                nome : "Marcelo Matos dos Santos",
+                idade : 32,
+                peso : 72.5,
+                humano : true
+                };
+            
+            console.log(aluno);
+
+
+            function soma(numero1,numero2){
+                var resultado = numero1 + numero2;
+                return resultado;
+            }
+
+            function retornaSexo(sexo){
+                if(sexo === 'M'){
+                    return 'Masculino';
+                }                
+                else{
+                    return 'Feminino';
+                }
+                
+            }
+            var resultado = soma(1,2);
+            console.log(resultado);
+            var resultado = retornaSexo('M')
+            console.log(resultado);
+
+            function exibeAlgo(){
+                console.log('Hello World');                
+            }
+
+
+         setInterval(exibeAlgo,1000);// Repete indefinidamente
+
+         setTimeout(exibeAlgo,1000); // Start em um TimeOut
+            
+            //JavaScript
+            </script>
+        </body>
+    </head>
+</html>
